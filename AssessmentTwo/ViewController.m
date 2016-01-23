@@ -16,7 +16,6 @@
 
 @property NSMutableArray *cityArray;
 
-
 @end
 
 @implementation ViewController
@@ -32,7 +31,6 @@
     City *city4 = [[City alloc] initWithname:@"Ottawa" andProvince:@"Ontario" andImage:[UIImage imageNamed:@"ottawa"]];
     
     self.cityArray = [NSMutableArray arrayWithObjects:city1, city2, city3, city4, nil];
-    
     
 }
 
@@ -58,7 +56,6 @@
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
@@ -87,6 +84,8 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
+    
+    
     [self.addTableView reloadData];
 }
 
@@ -94,9 +93,7 @@
     
     self.title = name;
     
-    
 }
-
 
 
 @end

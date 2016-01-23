@@ -7,6 +7,8 @@
 //
 
 #import "CityDetailViewController.h"
+#import "WikiWebViewController.h"
+
 
 @interface CityDetailViewController () <UITextFieldDelegate>
 
@@ -14,8 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *provinceTextField;
 
-
 @property (weak, nonatomic) IBOutlet UIImageView *cityImageView;
+
+@property (weak, nonatomic) IBOutlet UIButton *wikiButton;
 
 @end
 
@@ -23,8 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // self.title =
     
     self.cityTextField.text = self.cityObject.cityName;
     [self.cityTextField sizeToFit];
@@ -51,25 +52,48 @@
     [self.provinceTextField resignFirstResponder];
     
     return YES;
+
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    self.cityObject.cityName = self.cityTextField.text;
+    
+    [self.cityTextField resignFirstResponder];
+    
+    self.cityObject.province = self.provinceTextField.text;
+    
+    [self.provinceTextField resignFirstResponder];
 }
 
 
 - (IBAction)onButtonPressedUpdateCityName:(UIButton *)sender {
     
+    self.cityObject.cityName = self.cityTextField.text;
+
+    self.cityObject.province = self.provinceTextField.text;
+    
     [self.delegate cityNameText:self.cityTextField.text didTapButton:sender];
     
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onWikiButtonPressed:(UIButton *)sender {
 }
-*/
+
+
+// segue to wikiwebpage view controller
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    WikiWebViewController *dvc = segue.destinationViewController;
+    
+    dvc.name = self.cityTextField.text;
+    
+}
+
+-(IBAction)goback:(UIStoryboardSegue *)sender {
+    
+}
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3AA38FA1C53D31500CD8A27 /* WikiWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AA38F91C53D31500CD8A27 /* WikiWebViewController.m */; };
 		A3D3F78B1C527DAB00935C0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D3F78A1C527DAB00935C0C /* main.m */; };
 		A3D3F78E1C527DAB00935C0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D3F78D1C527DAB00935C0C /* AppDelegate.m */; };
 		A3D3F7911C527DAB00935C0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D3F7901C527DAB00935C0C /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A3AA38F81C53D31500CD8A27 /* WikiWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiWebViewController.h; sourceTree = "<group>"; };
+		A3AA38F91C53D31500CD8A27 /* WikiWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiWebViewController.m; sourceTree = "<group>"; };
 		A3D3F7861C527DAB00935C0C /* AssessmentTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssessmentTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D3F78A1C527DAB00935C0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3D3F78C1C527DAB00935C0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				A3D3F7901C527DAB00935C0C /* ViewController.m */,
 				A3D3F7A31C528BAB00935C0C /* CityDetailViewController.h */,
 				A3D3F7A41C528BAB00935C0C /* CityDetailViewController.m */,
+				A3AA38F81C53D31500CD8A27 /* WikiWebViewController.h */,
+				A3AA38F91C53D31500CD8A27 /* WikiWebViewController.m */,
 				A3D3F7A01C5280A500935C0C /* City.h */,
 				A3D3F7A11C5280A500935C0C /* City.m */,
 				A3D3F7921C527DAB00935C0C /* Main.storyboard */,
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D3F7911C527DAB00935C0C /* ViewController.m in Sources */,
+				A3AA38FA1C53D31500CD8A27 /* WikiWebViewController.m in Sources */,
 				A3D3F78E1C527DAB00935C0C /* AppDelegate.m in Sources */,
 				A3D3F7A21C5280A500935C0C /* City.m in Sources */,
 				A3D3F7A51C528BAB00935C0C /* CityDetailViewController.m in Sources */,
@@ -310,6 +316,7 @@
 				A3D3F79F1C527DAB00935C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
